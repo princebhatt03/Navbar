@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+#page1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  /* background-color: red; */
+}
+#navbar {
+  width: 100%;
+  padding: 10px;
+  background-color: #f8f8f8;
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.container {
+  cursor: pointer;
+  position: absolute;
+  /* top: 5%; */
+  right: 5%;
+  width: 30px;
+  height: 20px;
+}
+.bars {
+  width: 30px;
+  height: 4px;
+  background: #000;
+}
+.bars::before,
+.bars::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #000;
+}
+.bars::before {
+  margin-top: 9px;
+}
+.bars::after {
+  margin-top: 18px;
+}
+.nav1 {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: -100%;
+  top: 0;
+}
+.nav2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  padding: 10px;
+  /* background-color: yellow; */
+}
+.nav1 ul {
+  list-style: none;
+}
+.nav1 ul li {
+  margin: 50px 0;
+}
+.nav1 ul li a {
+  color: #fafafa;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.nav1 ul li a:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  height: 3px;
+  border-radius: 5px;
+  background: #fff;
+  bottom: -10px;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  transform: scaleX(0);
+}
+.nav1 ul li a:hover:after {
+  transform: scaleX(1);
+}
+.nav1 .close {
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+}
+.close:hover {
+  color: rgb(209, 3, 3);
+}
+.nav1 h2 {
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  font-size: 2em;
+}
+.nav1 .close div::before,
+.nav1 .close div::after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #fff;
+  transition: background 0.5s ease;
+}
+.nav1 .close div::before {
+  transform: rotate(-45deg);
+}
+.nav1 .close div::after {
+  transform: rotate(45deg);
+}
+.nav1 .close:hover div::before,
+.nav1 .close:hover div::after {
+  background: rgb(209, 3, 3);
+}
