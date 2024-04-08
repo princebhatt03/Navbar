@@ -31,10 +31,8 @@ var loader = document.querySelector('.loader');
 var loadingOverlay = document.querySelector('.overlay1');
 
 document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(() => {
-    loader.classList.remove('loader');
-    loadingOverlay.style.display = 'none';
-  }, 1000);
+  loader.classList.remove('loader');
+  loadingOverlay.style.display = 'none';
 });
 
 /* ****************************************************** Loader *********************************************************** */
