@@ -3,7 +3,9 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Permanent Marker', cursive;
+  font-family: Gunsan;
+  font-weight: 900;
+  letter-spacing: 5px;
   box-sizing: border-box;
 }
 html,
@@ -24,7 +26,7 @@ body {
 .overlay1 {
   width: 100%;
   height: 100%;
-  background-color: #006241eb;
+  background-color: #006241c4;
   position: absolute;
   z-index: 90;
 }
@@ -141,7 +143,8 @@ body {
   font-size: 1.7em;
   text-decoration: none;
   font-weight: lighter;
-  letter-spacing: 2px;
+  letter-spacing: 4px;
+  font-weight: 700;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -215,6 +218,8 @@ body {
   height: 100%;
 }
 .slider {
+  width: 100%;
+  height: 100%;
   padding-top: 50%;
   position: relative;
   overflow: hidden;
@@ -261,24 +266,27 @@ body {
   text-align: left;
 }
 .slide__sub {
+  color: #ffffff;
   text-transform: uppercase;
-  font-size: 0.75rem;
-  color: #006241;
+  letter-spacing: 3px;
+  font-size: clamp(1rem, -0.7143rem + 2.8571vw, 1.25rem);
   margin-bottom: 5px;
 }
 .slide__title {
   color: #fff;
   font-weight: 300;
-  font-size: clamp(0.5375rem, -1.3036rem + 3.7143vw, 1.25rem);
+  font-size: clamp(1rem, -1.3036rem + 3.7143vw, 1.25rem);
   margin: 0;
-  padding: 2px;
+  text-align: center;
+  padding: 3px;
 }
 .slide__title2 {
   color: #fff;
   font-weight: 300;
-  font-size: clamp(0.4375rem, -1.3036rem + 3.7143vw, 1rem);
+  font-size: clamp(0.8rem, -1.3036rem + 3.7143vw, 1rem);
   margin: 0;
-  padding: 2px;
+  text-align: center;
+  padding: 3px;
 }
 .slide__image {
   width: 100%;
@@ -295,7 +303,13 @@ body {
 #page2 {
   width: 100%;
   height: 100vh;
-  background-color: salmon;
+  position: relative;
+  background-color: #fff;
+}
+.page2-container1 {
+  width: 100%;
+  height: 100%;
+  background-color: #006241;
 }
 
 /* ***********************************************  Mobile View  *********************************************** */
@@ -355,9 +369,6 @@ body {
     text-align: left;
   }
   .slide__sub {
-    text-transform: uppercase;
-    font-size: clamp(0.625rem, -0.7143rem + 2.8571vw, 1.25rem);
-    color: #006241;
     margin-bottom: 8px;
   }
 }
